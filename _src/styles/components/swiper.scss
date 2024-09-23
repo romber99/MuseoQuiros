@@ -1,0 +1,77 @@
+/**
+ * Swiper.js styling overrides
+ *
+ * 1. Swiper pagination
+ * 2. Extra custom classes
+ * 
+ */
+
+
+// ----------------------------------
+//  1. Swiper pagination
+// ----------------------------------
+
+.swiper-horizontal>.swiper-pagination-bullets {
+    position: relative;
+    .swiper-pagination-bullet {
+        background-color: var(--c-primary);
+        transition: width .2s ease-out;
+        border-radius: 8px;
+        width: 16px;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: var(--c-primary);
+        width: 32px;
+    }
+}
+
+.swiper-horizontal>.swiper-pagination {
+    bottom: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+.swiper-horizontal>.swiper-navigation { // Keep navigation icons within container margins
+    max-width: var(--s-container);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    color: var(--c-primary-text);
+}
+
+@include mq("md-down") {
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 32px;
+    }
+}
+
+@include mq("sm") {
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 24px;
+    }
+}
+
+// ----------------------------------
+//  2. Extra custom classes
+// ----------------------------------
+
+.swiper.overflow-hidden {
+    overflow: hidden;
+}
+
+.swiper-slide-navigation-padding {
+    padding: 0 0px;
+}
+
+@include mq("md-down") {
+    .swiper-slide-navigation-padding {
+        padding: 0 25px;
+    }
+}

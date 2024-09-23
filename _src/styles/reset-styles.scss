@@ -1,0 +1,33 @@
+/*
+ * Custom reset HTML default styles
+ */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+}
+body, html {
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+button {
+    border: none;
+}
+@mixin focus-outline {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: var(--c-primary-light);
+    outline-offset: 2px;
+}
+*:focus-visible {
+    @include focus-outline;
+}
+ul.menu, ul.sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

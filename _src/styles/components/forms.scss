@@ -1,0 +1,136 @@
+/**
+ * Form element and its components
+ *
+ * 1. Form element styling & element spacing
+ * 2. Label styling
+ * 3. Form elements
+ * 
+ */
+
+form {
+
+    // ----------------------------------
+    //  1. Form element styling & element spacing
+    // ----------------------------------
+
+    display: flex;
+    flex-direction: column;
+
+    >*:not(label) {
+        margin-bottom: .25rem;
+        margin-top: 0;
+    }
+    >label {
+        margin-bottom: .25rem;
+    }
+    >p:last-of-type {
+        margin-bottom: 0px;
+    }
+    .form-row {
+        display: flex;
+        gap: 1rem;
+        >*:not(label) {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+
+    // ----------------------------------
+    //  2. Label styling
+    // ----------------------------------
+
+    label {
+        font-weight: 400;
+        color: var(--c-text-grey);
+        font-size: .8em;
+        line-height: .8em;
+    }
+
+
+    // ----------------------------------
+    //  3. Form elements
+    // ----------------------------------
+
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="date"], input[type="file"],
+    select, textarea {
+        padding: .5em 1em;
+        border: var(--u-border-light);
+        border-radius: 8px;
+        margin: 0.5rem 0;
+        width: 100%;
+        background-color: var(--bg-main-2);
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: var(--c-text-grey);
+            opacity: 1; /* Firefox */
+        }  
+        &.wpcf7-not-valid {
+            border: 1px solid var(--c-danger);
+        }
+    }
+
+    textarea {
+        max-width: 100%;
+        color: var(--c-text);
+        font-family: $font-default;
+        font-size: 1rem;
+        max-height: 100px;
+    }
+
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        margin-right: .5rem;
+    }
+}
+
+form.wpcf7-form {
+    p {
+        display: grid;
+        input[type="submit"] {
+            justify-self: flex-end;
+        }
+    }
+    .wpcf7-spinner {
+        background-color: var(--bg-main-2);
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        border: var(--u-border-light);
+        &::before {
+            background-color: var(--c-primary-light);
+            top: 8px;
+            left: 8px;
+            width: 8px;
+            height: 8px;
+            transform-origin: 14px 14px;
+        }
+    }
+    .wpcf7-not-valid-tip {
+        margin-bottom: .5rem;
+    }
+    .wpcf7-list-item {
+        margin-left: 0px!important;
+    }
+    &.invalid .wpcf7-response-output, &.unaccepted .wpcf7-response-output {
+        border: none!important;
+        background-color: var(--c-danger);
+        margin: 0;
+        margin-top: 1rem;
+        border-radius: 16px;
+        font-size: .8em;
+        padding: .75rem 1rem;
+        padding-left: 2.5rem;
+        position: relative;
+        &::before {
+            @include icon();
+            content: '\f634';
+            position: absolute;
+            left: 16px;
+            margin-block: auto;
+            font-style: normal;
+            font-size: 1.5em;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.site-logo {
+    padding: 6px 0;
+    display: flex;
+    align-items: flex-start;
+    a {
+        max-width: 100%;
+        height: 100%;
+        //width: 200px;
+        color: var(--c-a);
+        img, svg {
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .style-svg {
+            // height: 50px;
+            margin: auto;
+        }
+    }
+    .site-name a {
+        //line-height: 0.6em;
+        font-size: 32px;
+        white-space: nowrap;
+    }
+}

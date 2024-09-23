@@ -1,0 +1,14 @@
+a {
+    color: var(--c-a);
+    text-decoration: none;
+    font-weight: 600;
+    &:hover, &:focus, &:focus-within {
+        color: var(--c-a-hover);
+    }
+}
+
+// External link icon
+/* a[rel="external"]:after {
+    content: '\f35d';
+    font-family: 'Font Awesome 5 Pro';
+} */

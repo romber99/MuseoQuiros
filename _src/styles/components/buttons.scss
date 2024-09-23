@@ -1,0 +1,183 @@
+/**
+ * Buttons
+ *
+ * 1. Mixins
+ * 2. Fill buttons
+ * 3. Outline buttons
+ * 4. Link buttons
+ * 
+ */
+
+// ----------------------------------
+//  1. Mixins
+// ----------------------------------
+
+@mixin btn() {
+    padding: 1em 1.4em;
+    line-height: 1em;
+    font-weight: 400;
+    border-radius: 16px;
+    box-shadow: var(--u-shadow);
+    transition: transform .25s ease-out;
+    font-size: .8em;
+    letter-spacing: .1ch;
+    > i {
+        font-size: 0.9em;
+        &:not(:first-child) {
+            margin-left: 0.5em;
+        }
+        &:not(:last-child) {
+            margin-right: 0.5em;
+        }
+    }
+    &:hover, &:focus-visible, &:focus-within {
+        transform: scale(1.05);
+    }
+}
+
+@mixin btn-outline() {
+    @include btn;
+    padding: calc(.75em - 1px) calc(1.2em - 1px);      // 16px font size -> 8px - 4px(border) / 12px - 4px(border);
+    border: 1px solid;
+    background-color: transparent;
+}
+
+// ----------------------------------
+//  2. Fill buttons
+// ----------------------------------
+
+.btn-default, .btn {
+    @include btn;
+    background:         #086a53;
+    color:              white;
+    //border:             var(--u-border-light);
+    &:hover, &:focus-visible, &:focus-within {
+        color:              white;
+    }
+}
+
+.btn-primary {
+    @include btn;
+    background:         var(--g-primary);
+    color:              var(--c-primary-text);
+    &:hover, &:focus-visible, &:focus-within {
+        transform: scale(1.1);
+        color:              var(--c-primary-text);
+    }
+}
+
+.btn-secondary {
+    @include btn;
+    background:         var(--g-secondary);
+    color:              var(--c-accent-text);
+    &:hover, &:focus-visible, &:focus-within {
+        transform: scale(1.1);
+        color:              var(--c-accent-text);
+    }
+}
+
+// ----------------------------------
+//  3. Outline buttons
+// ----------------------------------
+
+.btn-default-outline, .btn-outline {
+    @include btn-outline;
+    background-color:   var(--c-text);
+    color:              var(--c-text);
+}
+
+.btn-primary-outline {
+    @include btn-outline;
+    border-color:       var(--c-primary);
+    color:              var(--c-primary);
+    &:hover, &:focus-visible, &:focus-within {
+        background-color:   var(--c-primary);
+        color:              var(--c-primary-text);
+    }
+}
+
+.btn-secondary-outline {
+    @include btn-outline;
+    border-color:       var(--c-accent);
+    color:              var(--c-accent);
+    &:hover, &:focus-visible, &:focus-within {
+        background-color:   var(--c-accent);
+        color:              var(--c-accent-text);
+    }
+}
+
+// ----------------------------------
+//  4. Link buttons
+// ----------------------------------
+
+a[class^='btn'] {
+    text-decoration: none;
+    display: inline-block;
+}
+
+li[class^='btn'] {
+    padding-right: 0;
+    padding-left: 0;
+    > a {
+        border-radius: 8px;
+        text-decoration: none;
+        color: unset;
+        padding: 0.5em 0.75em;
+    }
+}
+
+.icon-link-btn {
+    font-weight: 600;
+    color: var(--c-primary);
+    i {
+        &:last-child {
+            margin-left: .2em;
+        }
+        &:first-child {
+            margin-right: .2em;
+        }
+    }
+    &:hover, &:focus-visible, &:focus-within {
+        color: var(--c-accent);
+    }
+}
+
+input[type="submit"], button[type="submit"] {
+    @include btn;
+    background:         var(--g-primary);
+    color:              var(--c-primary-text);
+    border:             none!important;
+    cursor:             pointer;
+    &:hover, &:focus-visible, &:focus-within {
+        transform: scale(1.1);
+        color:              var(--c-primary-text);
+    }
+}
+
+/* -----------------------------
+    Breakpoints
+----------------------------- */
+@include mq("md-down") {
+    .btn-primary, .btn-secondary, .btn-default {
+        font-size: 1em;
+    }
+}
+
+@include mq("md-down") {
+    .btn-read-more {
+        background: transparent!important;
+        border-color: transparent!important;
+        padding: 0;
+        line-height: 2rem;
+        display: flex!important;
+        color: var(--c-primary-light);
+        &:after {
+            @include icon();
+            content: '\ea1f';
+            font-size: 2em;
+        }
+        span {
+            display: none!important;
+        }
+    }
+}

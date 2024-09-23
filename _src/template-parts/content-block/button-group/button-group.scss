@@ -1,0 +1,9 @@
+div.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+article.product-info div.button-group {
+    justify-content: end;
+}

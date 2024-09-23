@@ -1,0 +1,96 @@
+section#contact-form {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    min-height: 80vh;
+    .container {
+        z-index: 2;
+        padding: 2rem 0;
+        font-style: italic;
+        position: relative;
+        width: 100%;
+        gap: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        h2 {
+            margin-bottom: 1rem;
+            margin-top: 0;
+            font-size: 3rem;
+            max-width: 20ch;
+            text-align: left;
+            span.big {
+                font-size: 1.1em;
+                margin-left: 1rem;
+                line-height: .7em;
+            }
+        }
+        .form-column {
+            flex: 0 1 50%;
+        }
+        .form-container {
+            flex-grow: 1;
+            width: 100%;
+            border: var(--u-border-light);
+            border-radius: var(--u-border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--u-shadow);
+            background-color: var(--bg-main);
+            padding: 2rem;
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+    .backdrop-blur {
+        z-index: 1;
+        position: absolute;
+        top: 0; bottom: 0; right: 0; left: 0;
+    }
+    .section-background {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        img, video, iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img-background {
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/* -----------------------------
+    Breakpoints
+----------------------------- */
+@include mq("md-down") {
+    #contact-form {
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .form-image {
+                display: none;
+            }
+
+            .form-column {
+                h2 {
+                    text-align: center;
+                }
+
+                .wpcf7-submit {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}

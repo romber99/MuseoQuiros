@@ -1,0 +1,59 @@
+/*
+ * Mixin functions
+ *
+
+ * 1. Media queries
+ * 2. Icons
+ * 3. Utility
+ * 
+ */
+
+// ----------------------------------
+//  1. Media queries
+// ----------------------------------
+
+$breakpoint-sizes: (
+    "sm":           480px,
+    "md-down":      768px,
+    "md-up":        481px,
+    "lg-down":      1024px,
+    "lg-up":        769px,
+    "xl":           1200px,
+);
+
+$mobile-bp: "lg-down";
+
+@mixin mq($size) {
+    @if (str-index($size, '-up') or str-index($size, 'xl')) {
+        @media (min-width: #{map-get($breakpoint-sizes,$size)}) {
+            @content;
+        }
+    } @else {
+        @media (max-width: #{map-get($breakpoint-sizes,$size)}) {
+            @content;
+        }
+    }
+}
+
+// ----------------------------------
+//  2. Icons
+// ----------------------------------
+
+@mixin icon($w: 500) {
+    font-family: "tabler-icons" !important;
+    font-weight: $w;
+}
+
+// ----------------------------------
+//  3. Utility functions
+// ----------------------------------
+
+@function toRGB($color) {
+    @return "" + red($color) + ", " + green($color) + ", " + blue($color);
+}
+@function toRGBA($color) {
+    @return "" + red($color) + ", " + green($color) + ", " + blue($color) + ", " + alpha($color);
+}
+@function toRGB_A($color, $alpha) {
+    @return "" + red($color) + ", " + green($color) + ", " + blue($color) + ", " + $alpha;
+}

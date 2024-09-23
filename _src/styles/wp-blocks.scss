@@ -1,0 +1,16 @@
+/*
+ * WordPress Gutemberg block styling 
+ */
+
+.wp-block-image {
+    margin: 1rem 0;
+    img {
+    height: 100%;
+    }
+}
+
+@include mq($mobile-bp) {
+    .wp-block-image {
+        margin: 2rem 0;
+    }
+}

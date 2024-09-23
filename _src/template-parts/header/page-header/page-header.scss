@@ -1,0 +1,26 @@
+#page-header {
+    .container {
+        display: flex;
+        flex-direction: row;
+        font-weight: 100;
+        font-size: 2rem;
+        padding-block: 1rem;
+        color: var(--c-text-grey);
+        a {
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 2px!important;
+        }
+        h1 {
+            color: var(--c-text-grey);
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-block: 0!important;
+            margin-top: 4px!important;
+        }
+    }
+}

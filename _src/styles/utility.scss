@@ -1,0 +1,59 @@
+/*
+ * Utility classes
+ *
+
+ * 1. Backgrounds & text-colors
+ * 
+ */
+
+// Primary
+.bg-primary {
+    background-color: var(--c-primary);
+    color: var(--c-primary-text);
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, a, a.btn-link {
+        color: var(--c-primary-text);
+    }
+
+}
+.color-primary {
+    color: var(--c-primary);
+}
+
+// Secondary (deprecated) & accent
+.bg-secondary {
+    background-color: var(--c-accent);
+    color: var(--c-accent-text);
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: var(--c-accent-text);
+    }
+}
+.color-secondary {
+    color: var(--c-accent);
+}
+.bg-accent {
+    background-color: var(--c-accent);
+    color: var(--c-accent-text);
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: var(--c-accent-text);
+    }
+}
+.color-accent {
+    color: var(--c-accent);
+}
+
+// Light & other utility
+.bg-default {
+    background-color: var(--bg-default);
+}
+.bg-light {
+    background-color: var(--bg-main);
+}
+.bg-light-2 {
+    background-color: var(--bg-main-2);
+}
+.bg-inverse {
+    background-color: var(--bg-inverse);
+}
+.bg-inverse-2 {
+    background-color: var(--bg-inverse-2);
+}

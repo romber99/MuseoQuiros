@@ -1,0 +1,86 @@
+#hero-swiper-header {
+    --header-min-height: 80vh;
+    --c-text-dark: var(--c-primary-text);
+    margin-top: calc(var(--s-navbar) * -1);
+    padding-bottom: 1rem;
+    //padding-top: var(--s-navbar);
+    &.one-slide {
+        --header-min-height: 50vh;
+        h2.h1 {
+            font-size: 3.6rem;
+        }
+    }
+    h1, p.subtitle {
+        font-size: 1.6rem;
+        margin: 0!important;
+        font-weight: 300;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-bottom: .5rem!important;
+    }
+    h1, h2 {
+        line-height: 1em!important;
+    }
+    .title-floating {
+        position: absolute!important;
+        z-index: 2!important;
+        left: 0;
+        right: 0;
+        top: 48px;
+        display: none!important // No me gusta como queda, pero lo dejo por si lo queremos reactivar
+    }
+    p {
+        margin-block: .5rem;
+    }
+    .button-group {
+        margin-top: 2rem;
+    }
+    h2.h1 {
+        margin-top: 0!important;
+        margin-bottom: 1rem;
+    }
+    h2.h1:first-child {
+        margin-bottom: 0!important;
+    }
+    .swiper-navigation {
+        max-width: calc(var(--s-container) + 160px);
+        top: 50%;
+    }
+    .swiper-pagination {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        bottom: 1rem;
+    }
+    .slider-content {
+        height: 100%;
+        display: flex;
+    }
+    .container {
+        z-index: 1;
+        padding: 2rem 0;
+        width: 100%;
+        margin-bottom: 0;
+        position: relative;
+    }
+    .header-background {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        img, video, iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img-background {
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

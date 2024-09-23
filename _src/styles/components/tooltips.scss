@@ -1,0 +1,44 @@
+$tooltip-offset: 8px;
+
+*[data-tooltip]::before {
+    content: '';
+    transform: translateX(0);
+    opacity: 0;
+    top: 50%;
+}
+*[data-tooltip]:hover:not([data-tooltip-on*="focus"]):not([data-tooltip-on*="input"]),
+*[data-tooltip]:focus:not([data-tooltip-on="hover"]):not([data-tooltip-on*="input"]),
+*[data-tooltip][data-tooltip-on="focus-within"]:focus-within,
+input:focus-visible + *[data-tooltip][data-tooltip-on="input-label"] {
+    position: relative;
+    &::before {
+        content: attr(data-tooltip);
+        background-color: var(--u-border);
+        color: #333333;
+        font-size: 12px;
+        min-width: 10ch;
+        text-align: center;
+        padding: 0.5em 0.75em;
+        border-radius: 6px;
+        position: absolute;
+        top: calc(100% + $tooltip-offset);
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        z-index: 999;
+        transition: top .5s ease-out, opacity .6s;
+    }
+    &[data-tooltip-pos*="top"]::before {
+        top: unset;
+        bottom: calc(0% - $tooltip-offset);
+    }
+    &[data-tooltip-pos*="left"]::before {
+        transform: unset;
+        left: unset;
+        right: 0%;
+    }
+    &[data-tooltip-pos*="right"]::before {
+        transform: unset;
+        left: 0%;
+    }
+}

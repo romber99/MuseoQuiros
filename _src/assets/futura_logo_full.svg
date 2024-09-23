@@ -1,0 +1,50 @@
+<svg id="Logo_Vector" data-name="Logo Vector" xmlns="http://www.w3.org/2000/svg" width="932" height="726" viewBox="0 0 932 726">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff501a;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #ff6b19;
+      }
+
+      .cls-5 {
+        fill: #ff6a19;
+      }
+    </style>
+  </defs>
+  <g id="Formas">
+    <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M38.008-.253H234.589c54.087,0,50.786,100.382,0,100.382H38.008C-12.365,100.129-12.365-.253,38.008-0.253Z"/>
+    <circle id="Elipse_1" data-name="Elipse 1" class="cls-2" cx="347.515" cy="49.938" r="50.203"/>
+  </g>
+  <g id="Futura">
+    <path id="Forma_2" data-name="Forma 2" class="cls-3" d="M96.564,150.32v66.921s-34.949-.015-29.278,41.826H96.564v66.921H67.286v66.921H0.365V233.971C5.327,154.546,96.564,150.32,96.564,150.32Z"/>
+    <path id="Forma_3" data-name="Forma 3" class="cls-3" d="M130.025,225.606h62.738V330.17c13.469,20.645,29.278,0,29.278,0V225.606H280.6V338.535c-10.632,71.625-121.509,95.027-150.572,0V225.606Z"/>
+    <path id="Forma_3_copia" data-name="Forma 3 copia" class="cls-3" d="M447.9,225.606h62.739V330.17c13.468,20.645,29.278,0,29.278,0V225.606h58.556V338.535c-10.633,71.625-121.51,95.027-150.573,0V225.606Z"/>
+    <path id="Forma_4" data-name="Forma 4" class="cls-3" d="M318.241,154.5h62.738v71.1h29.278v62.739H380.979s-0.709,13.039,0,25.095,16.73,16.73,16.73,16.73h12.548v66.921c-58.835-2.13-92.016-38.554-92.016-66.921V154.5Z"/>
+    <path id="Forma_5" data-name="Forma 5" class="cls-3" d="M736.5,217.241c0,4.382-.5,65.759-0.5,65.759s-20.728-9.164-28.78,9.527V392.909H644.481V275.8C644.481,265.155,661.231,209.286,736.5,217.241Z"/>
+    <path id="Forma_6" data-name="Forma 6" class="cls-3" d="M870,391h58V284c0-18.776-18.63-66-85-66-29.255,0-92,15.234-92,88s70,89,70,89h31V334c-18.048,9.9-40-6.043-40-27s19.685-29,29-29c28.528,0.582,29,30,29,30v83Z"/>
+  </g>
+  <g id="Logo">
+    <path id="Forma_7" data-name="Forma 7" class="cls-4" d="M255,580s30.957,36.675,10,78c3.4,4.529,20.035-2.6,24-6a15.977,15.977,0,0,0,6-13c0-6.793-10.168-53.17-13-56s-4.168-3.434-7-4S255,580,255,580Z"/>
+    <path id="Forma_7_copia" data-name="Forma 7 copia" class="cls-4" d="M45.469,580s-30.957,36.675-10,78c-3.4,4.529-20.035-2.6-24-6a15.976,15.976,0,0,1-6-13c0-6.793,10.168-53.17,13-56s4.168-3.434,7-4S45.469,580,45.469,580Z"/>
+    <path id="Forma_8" data-name="Forma 8" class="cls-4" d="M151,473c-21.729,0-15.857,25.565-6,26v23H130.856c-2.251,0-3.856,4-3.856,4v14s-84.867,16.408-86,90,77.151,96,111,96,109-23.974,109-97-87-89-87-89V526s-1.882-4-4.394-4H157V499C166.7,499,170.722,473,151,473ZM51,632c0-55.677,51.391-69.091,101-69,52.934,0.1,99.592,17.219,99,69C249.794,737.39,51,737.466,51,632Z"/>
+    <circle id="Elipse_2" data-name="Elipse 2" class="cls-5" cx="107" cy="632" r="25"/>
+    <circle id="Elipse_2_copia" data-name="Elipse 2 copia" class="cls-5" cx="191" cy="632" r="25"/>
+  </g>
+  <g id="Vive">
+    <path id="Forma_9" data-name="Forma 9" class="cls-3" d="M361,514H351l87,197,88-196H516L438,692Z"/>
+    <path id="Forma_9_copia" data-name="Forma 9 copia" class="cls-3" d="M614,514H604l87,197,88-196H769L691,692Z"/>
+    <rect id="Forma_10" data-name="Forma 10" class="cls-2" x="561" y="513" width="9" height="197"/>
+    <path id="Forma_11" data-name="Forma 11" class="cls-3" d="M932,511H813V713H931v-7H821V615h92v-6H821V518H932v-7Z"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+@keyframes floating {
+    0% { transform: translate(0,  2px); }
+    100%   { transform: translate(0, -2px); }
+}
+
+.read-more-divider {
+    width: 100%;
+    border-bottom: 1px solid var(--c-primary);
+    color: var(--c-primary);
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transform: translate(0, 0);
+    span {
+        display: flex;
+        justify-content: center;
+        animation: floating 1s ease-in-out infinite alternate;
+    }
+    span::after, span::before {
+        @include icon;
+        content: '\ea16';
+        font-size: 1rem;
+        margin-inline: .25rem;
+    }
+}

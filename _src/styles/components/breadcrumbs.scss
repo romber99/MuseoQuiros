@@ -1,0 +1,35 @@
+nav.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    .crumb a {
+        color: var(--c-text);
+    }
+    .crumb.current {
+        font-weight: 600;
+        color: var(--c-primary);
+    }
+    .crumb:not(:first-child)::before {
+        //@include fa("solid");
+        content: "~";
+        padding: 0 0.6rem;
+        color: var(--c-text);
+    }
+}
+
+@include mq("sm") {
+    nav.breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        .crumb:not(:nth-last-child(2)) {
+            display: none;
+        }
+        .crumb:nth-last-child(2)::before {
+            //@include fa("solid");
+            content: "~";
+            padding: 0 0.6rem;
+        }
+    }
+    
+}

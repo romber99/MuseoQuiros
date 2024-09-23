@@ -1,0 +1,38 @@
+/**
+ * Chip elements, small inline spans of text inside pill-shaped blocks
+ *
+ * 1. Mixins
+ * 2. Chip variations
+ * 
+ */
+
+// ----------------------------------
+//  1. Mixins
+// ----------------------------------
+
+@mixin chip() {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    i:first-child {
+        padding-right: .2rem;
+    }
+}
+
+
+// ----------------------------------
+//  2. Chip variations
+// ----------------------------------
+
+span.chip {
+    @include chip();
+    background-color: var(--bg-main2);
+    color: var(--c-text);
+}
+
+span.chip-success {
+    @include chip();
+    background-color: var(--c-success);
+    color: var(--c-success-text);
+}

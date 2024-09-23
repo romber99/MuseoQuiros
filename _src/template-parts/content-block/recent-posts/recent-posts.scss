@@ -1,0 +1,28 @@
+.recent-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+// Breakpoints
+
+@include mq("md-down") {
+    .recent-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        .older-posts {
+            grid-column: 1 / 3;
+        }
+    }
+    .section-header {
+       margin-bottom: 1rem !important;
+    }
+}
+
+@include mq("sm") {
+    .recent-list {
+        .older-posts {
+            display: none;
+        }
+    }
+}

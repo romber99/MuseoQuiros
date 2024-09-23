@@ -1,0 +1,81 @@
+.animate {
+    &.fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+    }
+    &.slide-down {
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-down-big {
+        transform: translateY(-200px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-up {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-up-big {
+        transform: translateY(200px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-right {
+        transform: translateX(-100px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-right-big {
+        transform: translateX(-300px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-left {
+        transform: translateX(100px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.slide-left-big {
+        transform: translateX(300px);
+        opacity: 0;
+        transition: opacity .5s ease-in, transform 1s ease-out;
+    }
+    &.zoom-in-bg {
+        transform: scale(1.4);
+        filter: blur(20px);
+        transition: transform 4s ease-in-out, filter 2s linear;
+    }
+
+    &.in-view {
+        &.fade-in {
+            opacity: 1;
+        }
+        &.slide-down, &.slide-down-big, &.slide-up, &.slide-up-big {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        &.slide-right, &.slide-left, &.slide-right-big, &.slide-left-big {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        &.zoom-in-bg {
+            transform: scale(1);
+            filter: blur(0px);
+        }    
+    }
+    &.delay-025, &.delay-i-0 {
+        transition-delay: .25s;
+    }
+    &.delay-05, &.delay-i-1 {
+        transition-delay: .5s;
+    }
+    &.delay-075, &.delay-i-2 {
+        transition-delay: .75s;
+    }
+    &.delay-1, &.delay-i-3 {
+        transition-delay: 1s;
+    }
+}

@@ -1,0 +1,65 @@
+#hero-header {
+    --header-min-height: 100vh;
+    --c-text-dark: var(--c-primary-text);
+    margin-top: calc(var(--s-navbar) * -1);
+    overflow-y: hidden;
+    .outline {
+        background: transparent!important;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px var(--c-text);
+    }
+    .container {
+        z-index: 1;
+        padding: 2rem 0;
+        width: fit-content;
+        font-style: italic;
+        h1 {
+            display: flex;
+            flex-direction: column;
+            margin-block: 0;
+            span.big {
+                font-size: 2em;
+                letter-spacing: .2ch;
+                margin-left: 1rem;
+                line-height: .7em;
+            }
+        }
+        p.subtitle {
+            font-weight: 200;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: .25ch;
+            margin-block: 0;
+        }
+    }
+    .header-background {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        img, video, iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img-background {
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/* -----------------------------
+    Breakpoints
+----------------------------- */
+@include mq("md-down") {
+    div.img-background {
+        width: 150%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

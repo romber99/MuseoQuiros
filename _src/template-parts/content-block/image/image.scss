@@ -1,0 +1,21 @@
+.media-image-section img {
+    width: 100%;
+    transition: transform 0.5s;
+    border-radius: var(--u-border-radius-lg);
+    overflow: hidden;
+}
+
+.media-image-section a {
+    width: 100%;
+    display: block;
+    &:hover img {
+        transform: scale(1.025);
+    }
+}
+
+@include mq("md-down") {
+    .media-image-section img {
+        padding-top: 2rem;
+        padding-block: 1rem;
+    }
+}

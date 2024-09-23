@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*!
+ Theme Name:   Museo Quiros WP Theme
+ Theme URI:    https://quiros.es/museo-etnografico
+ Description:  Basic theme implementing the quiros-theme elements
+ Author:       Futura Vive
+ Author URI:   https://quiros.es/museo-etnografico
+ Version:      1.0.0
+ License:      All rights reserved
+ Tags:         custom-menu, custom-logo
+ Text Domain:  quiros-theme
+*/
+
+// Global styles
+@import 'styles/styles';
+
+// Template part specific styles
+@import 'template-parts/template-parts';

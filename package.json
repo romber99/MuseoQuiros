@@ -1,0 +1,28 @@
+{
+  "name": "quiros-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/FUTURAVIVE/MuseoQuiros.git"
+  },
+  "author": "Andrea Romero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FUTURAVIVE/MuseoQuiros/issues"
+  },
+  "homepage": "https://github.com/FUTURAVIVE/MuseoQuiros#readme",
+  "devDependencies": {
+    "@tabler/icons-webfont": "^2.47.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sftp-deploy": "^0.2.5",
+    "swiper": "8.4.7"
+  }
+}

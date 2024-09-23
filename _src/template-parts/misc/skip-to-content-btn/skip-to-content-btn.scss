@@ -1,0 +1,19 @@
+#btn-skip-to-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 1em;
+    bottom: 1em;
+    transform: translateY(-100px);
+    padding: 1em 1.25em;
+    &:focus, &:focus-visible {
+        transform: translateX(0);
+        transition: transform 0.4s;
+    }
+}
+
+@include mq('md-down') {
+    #btn-skip-to-content {
+        display: none!important;
+    }
+}

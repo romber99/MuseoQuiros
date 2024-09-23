@@ -1,0 +1,128 @@
+/*
+ * SCSS variables
+ *
+
+ * 1. Font import
+ * 2. Color map
+ * 3. Font size maps (desktop & mobile)
+ * 4. Breakpoints
+ * 5. Content width & margins
+ * 
+ */
+
+
+// Font import (Google Fonts)
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gudea:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&display=swap');
+
+$font-default: 'Barlow', sans-serif;
+$font-accent: 'Barlow', sans-serif;
+
+// SCSS colors for generating variations via custom RGB functions
+$color: (
+    "primary": #006400,
+    "primary-light": #32CD32,
+    "primary-dark": #013220,
+    "primary-faded": #556B2F,
+    "primary-faded-transparent": #556b2fa8,
+    "accent":  #A0522D,
+    "accent-light":  #D2691E,
+    "text-color": #333333,
+
+    "bg-main": #F5F5DC,
+    "bg-main-transparent": #F5F5DCa8,
+    "bg-main-2": #DEB887,
+    "bg-light":  #D2B48C,
+    "bg-inverse": #FFFFFF,
+);
+
+:root {
+    // Primary and accent theme colors
+    --c-primary:            #{map-get($color, "primary")};
+    --c-primary-rgb:        #{toRGB(map-get($color, "primary"))};
+    --c-primary-dark:       #{map-get($color, "primary-dark")};
+    --c-primary-light:      #{map-get($color, "primary-light")};
+    --c-primary-faded:      #{map-get($color, "primary-faded")};
+    
+    --c-accent:            #{map-get($color, "accent")};
+    --c-accent-rgb:        #{toRGB(map-get($color, "accent"))};
+    --c-accent-dark:       #{darken(map-get($color, "accent"), 10%)};
+    --c-accent-light:      #{map-get($color, "accent-light")};
+
+    // Gradients
+    --g-primary:            linear-gradient(145deg, var(--c-primary-light), var(--c-primary));
+    --g-secondary:          linear-gradient(145deg, var(--c-accent-light), var(--c-accent));
+    --g-neutral:            linear-gradient(145deg, var(--bg-light), var(--c-primary-light));
+    
+    // Text over main colors
+    --c-primary-text:       #FFF;
+    --c-accent-text:        #FFF;
+
+    // Text color
+    --c-text:               #{map-get($color, "text-color")};
+    --c-text-dark:          #{darken(map-get($color, "text-color"), 5%)};
+    --c-text-light:         #{lighten(map-get($color, "text-color"), 10%)};
+    --c-text-grey:          #888888;
+    --c-text-grey-light:    #c5c5c5;
+
+    --c-a:                  var(--c-primary-light);
+    --c-a-hover:            var(--c-primary);
+
+    // Text size
+    --fs-default:           18px;
+
+    // Backgrounds
+    --bg-main:              #{map-get($color, "bg-main")};
+    --bg-light:             #{map-get($color, "bg-light")};
+    --bg-main-rgb:          #{toRGB(map-get($color, "bg-main"))};
+    --bg-main-2:            #{map-get($color, "bg-main-2")};
+
+    --bg-inverse:           #{map-get($color, "bg-inverse")};
+    --bg-inverse-rgb:       #{toRGB(map-get($color, "bg-inverse"))};
+    --bg-inverse-2:         #{darken(map-get($color, "bg-inverse"), 2%)};
+
+    --bg-card:              linear-gradient(to bottom right, #{map-get($color, "bg-main-transparent")} 40%, #{map-get($color, "primary-faded-transparent")});
+
+    // Content size & margins
+    --s-container:          min(90%, 80rem);
+    --s-navbar:             72px;
+    --m-section:            2rem;
+
+    // Utility
+    --c-shadow:             #00000020;
+    --u-shadow:             2px 4px 10px var(--c-shadow);
+    --u-shadow-lg:          4px 6px 16px var(--c-shadow);
+    --u-border:             1px solid var(--c-shadow);
+    --u-border-light:       1px solid #66666633;
+    --u-border-radius:           6px;
+    --u-border-radius-lg:        16px;
+
+    // Alerts
+    --c-success:            #e1ffce;
+    --c-success-text:       #497b2a;
+    --c-danger:             #632121;
+    --c-danger-text:        #ffe7e7;
+}
+
+@include mq($mobile-bp) {
+    :root {
+        --m-section:        1rem;
+        --fs-default:       14px;
+        --s-navbar:         42px;
+    }
+}
+
+$font-size: (
+    "default":          var(--fs-default),
+    "small":            0.8rem,
+
+    "main-title":       2rem,
+    "sub-title":        1.2rem,
+
+    "h1":               3rem,
+    "h2":               2rem,
+    "h3":               1.2rem,
+);
+
+// Margins
+$section-margin: 2rem;
+$section-margin-mobile: 1rem;

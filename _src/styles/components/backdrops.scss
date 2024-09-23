@@ -1,0 +1,42 @@
+*[class*="backdrop"]::after, *[class*="backdrop"]::before {
+    pointer-events: none;
+}
+.backdrop-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #22222200, #222222);
+}
+.backdrop-gradient-bottom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #22222200, 75%, #222222);
+}
+.backdrop-gradient-both::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #222222, #22222200 20%, #22222200 80%, #222222);
+}
+.backdrop-vignette::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: radial-gradient(#22222200, #222222);
+}
+.backdrop-blur {
+    backdrop-filter: blur(10px);
+}

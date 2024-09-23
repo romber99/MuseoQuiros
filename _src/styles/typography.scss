@@ -1,0 +1,120 @@
+/*
+ * Typography styling
+ *
+
+ * 1. Main body text
+ * 2. Headings
+ * 3. Text formatting (small, bold)
+ * 4. Other
+ * 
+ */
+
+// ----------------------------------
+//  1. Main body text
+// ----------------------------------
+
+html, button, label, input, select {
+    font-family: $font-default;
+    font-size: var(--fs-default);
+    color: var(--c-text);
+    line-height: 1.6em;
+}
+
+
+// ----------------------------------
+//  2. Headings
+// ----------------------------------
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1.2em;
+    font-weight: 500;
+    color: var(--c-text-dark);
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: $font-accent;
+}
+
+h1, .h1 {
+    font-size: map-get($font-size, "h1");
+}
+h2, .h2 {
+    font-size: map-get($font-size, "h2");
+}
+h3, .h3 {
+    font-size: map-get($font-size, "h3");
+}
+
+.subtitle {
+    font-size: map-get($font-size, "sub-title");
+    color: var(--c-text-light);
+}
+
+// ----------------------------------
+//  3. Text formatting (small, bold)
+// ----------------------------------
+
+@mixin text-small() {
+    --fs-default: map-get($font-size, "small");
+}
+.small {
+    @include text-small();
+}
+.bold, b, strong {
+    font-weight: 500;
+}
+strong.outline {
+    font-weight: 900;
+    color: transparent;
+    background: var(--g-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    //-webkit-text-stroke: 1px var(--c-text);
+    letter-spacing: .1ch;
+    &:not(:first-child) {
+        margin-left: 4px;
+    }
+}
+h1 strong.outline, h2 strong.outline {
+    font-weight: 800;
+    transition: letter-spacing .2s ease-out;
+}
+h1 strong.outline {
+    letter-spacing: .2ch;
+}
+h2:hover strong.outline,
+section:hover h2 strong.outline, section:focus-within h2 strong.outline {
+    letter-spacing: .2ch;
+}
+.section-header>h2 strong.outline, .text-elm>h2 strong.outline {
+    font-weight: 900;
+    &:not(:first-child) {
+        margin-left: 6px;
+    }
+}
+
+
+// ----------------------------------
+//  4. Other elements
+// ----------------------------------
+
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: var(--bg-main);
+    p:first-child {
+        margin-top: 0;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+hr {
+    border-style: solid;
+    color: var(--c-shadow);
+    margin: 2rem 0;
+}

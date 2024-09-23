@@ -1,0 +1,31 @@
+.page-sidebar .widget-container {
+    .widget {
+        padding: 2rem 0;
+        &:not(:last-child) {
+            border-bottom: 2px solid var(--bg-main);
+        }
+        &:first-child {
+            padding-top: 0;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        #wp-calendar {
+            width: 100%;
+            caption {
+                text-transform: capitalize;
+            }
+            td {
+                text-align: center;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            > li:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+}

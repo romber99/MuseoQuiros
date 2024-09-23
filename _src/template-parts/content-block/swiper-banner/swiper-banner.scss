@@ -1,0 +1,55 @@
+section.swiper-section {
+    h2 {
+        text-align: center;
+    }
+
+    .swiper-img-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-img {
+        min-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-slide {
+        border-radius: var(--u-border-radius-lg);
+        overflow: hidden;
+
+        &:not(.swiper-slide-active) a {
+            pointer-events: none;
+        }
+    }
+
+    .slider-content {
+        display: flex; // this fixes the sliders' sizing, for some reason
+        justify-content: center;
+    }
+
+    .swiper {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            right: 0;
+            background-image: linear-gradient(to left, #F5F5DC, #F5F5DC00 20%, #F5F5DC00 80%, #F5F5DC);
+            pointer-events: none;
+        }
+    }
+}
+
+@include mq("md-down") {
+    section.swiper-section {
+        .container:has(> a) {
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+}
