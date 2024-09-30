@@ -4,6 +4,7 @@
 
 article.post-card, article.post-mini {
     a.post-image {
+        position: relative;
         width: 100%;
         display: block;
         line-height: 0;
@@ -17,6 +18,22 @@ article.post-card, article.post-mini {
             aspect-ratio: 16/9;
             object-fit: cover;
             transition: transform 0.5s;
+        }
+        &.video-thumbnail {
+            background-color: black;
+            img {
+            opacity: 0.75;
+            }
+        }
+        &.video-thumbnail::after {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 30px);
+            z-index: 1;
+            @include icon();
+            content: '\ed46';
+            color: #fff;
+            font-size: 60px;
         }
         &:hover img {
             transform: scale(1.025);

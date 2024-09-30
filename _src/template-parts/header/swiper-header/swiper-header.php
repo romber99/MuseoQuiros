@@ -21,9 +21,10 @@ if ($header) :
                     <div class="swiper-slide">
                         <div class="slider-content"> 
                             <div class="container">
-                                <?php if ($main_title) : ?><p class="subtitle"><?php echo $main_title; ?></p><?php endif; ?>
-                                <?php if ($title) : ?><h2 class="h1"><?php echo $title; ?></h2>
-                                <?php else : ?><h2 class="h1"><?php echo get_the_title(); ?></h2><?php endif; ?>
+                                <?php if ($main_title) : ?><p class="subtitle text-background"><?php echo $main_title; ?></p><?php endif; ?>
+                                <?php if ($main_title && $title) : ?><br><?php endif; ?>
+                                <?php if ($title) : ?><h2 class="h1 text-background"><?php echo $title; ?></h2>
+                                <?php else : ?><h2 class="h1 text-background"><?php echo get_the_title(); ?></h2><?php endif; ?>
                                 <?php if ($text) : ?><?php echo $text; ?><?php endif; ?>
                                 <?php if ($btns) : ?>
                                     <?php get_template_part('template-parts/content-block/button-group/button-group', null,
@@ -34,7 +35,8 @@ if ($header) :
                                 <?php endif; ?>
                             </div>
                             <?php if($media): ?>
-                                <div class="header-background<?php if ($bg_backdrop) :?> backdrop-gradient backdrop-vignette<?php endif; ?>">
+                                <!-- <div class="header-background<?php if ($bg_backdrop) :?> backdrop-gradient backdrop-vignette<?php endif; ?>"> -->
+                                <div class="header-background">
                                     <?php if (is_array($media) && $media['type'] == 'image') : ?>
                                     <?php get_template_part('template-parts/content-block/image/image-elm', null,
                                         array(

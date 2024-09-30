@@ -1,6 +1,6 @@
 <header id="post-header">
     <div class="container">
-        <?php if ( has_post_thumbnail() ) :
+    <?php if ( has_post_thumbnail() && get_post_type() != 'video') :
             $thumbnail_id  = get_post_thumbnail_id($post->ID);
             $thumbnail_alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
             if (!$thumbnail_alt) $thumbnail_alt = get_the_title();

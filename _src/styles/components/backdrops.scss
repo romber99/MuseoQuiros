@@ -8,7 +8,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to bottom, #22222200, #222222);
+    background-image: linear-gradient(to bottom, #F5F5DC00, #F5F5DC70);
 }
 .backdrop-gradient-bottom::after {
     content: '';
@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to bottom, #22222200, 75%, #222222);
+    background-image: linear-gradient(to bottom, #F5F5DC00, 75%, #F5F5DC40);
 }
 .backdrop-gradient-both::after {
     content: '';
@@ -26,7 +26,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to bottom, #222222, #22222200 20%, #22222200 80%, #222222);
+    background-image: linear-gradient(to bottom, #F5F5DC, #F5F5DC00 20%, #F5F5DC00 80%, #F5F5DC);
 }
 .backdrop-vignette::before {
     content: '';
@@ -35,7 +35,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: radial-gradient(#22222200, #222222);
+    background-image: radial-gradient(#F5F5DC00, #F5F5DC40);
 }
 .backdrop-blur {
     backdrop-filter: blur(10px);

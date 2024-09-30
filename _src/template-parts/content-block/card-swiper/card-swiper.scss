@@ -110,14 +110,14 @@ article.card {
                 font-weight: 800;
                 transition: color .5s linear;
                 color: transparent;
-                background: var(--bg-main);
+                background: var(--c-text);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 //-webkit-text-stroke: 1px var(--c-text);
             }
             p {
-                color: var(--bg-main);
+                color: #222222;
             }
         }
     }
@@ -146,7 +146,7 @@ article.card {
         }
 
         h3 {
-            color: var(--c-text)!important;
+            color: var(--bg-main)!important;
             background: none!important;
             background-clip: unset;
             -webkit-background-clip: unset;

@@ -64,7 +64,7 @@ if (!$post_taxonomy || !$post_term) {
                 <?php if ($post_index < $mini_post_begin) : ?>
                         <article class="post-card animate slide-up delay-i-<?php echo $post_index;?>">
                             <?php if ( has_post_thumbnail() ) : ?>
-                                <a class="post-image" href="<?php the_permalink(); ?>" title="<?php esc_html__(the_title_attribute()); ?>">
+                                <a class="post-image<?php if (get_post_type() == 'video') { echo ' video-thumbnail'; } ?>" href="<?php the_permalink(); ?>" title="<?php esc_html__(the_title_attribute()); ?>">
                                     <?php the_post_thumbnail(); ?>
                                 </a>
                             <?php endif; ?>
