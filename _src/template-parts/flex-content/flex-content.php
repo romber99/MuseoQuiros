@@ -119,7 +119,7 @@
         elseif( get_row_layout() == 'form' ) :
             $title = get_sub_field('title');
             $formID = get_sub_field('cf7_form');
-            $image = get_sub_field('image');
+            // $image = get_sub_field('image');
             $bg_backdrop =  get_sub_field('bg_backdrop');
             $bg_backdrop_blur =  get_sub_field('bg_backdrop_blur');
             $type =  get_sub_field('type');
@@ -131,7 +131,7 @@
                 array(
                     'title'     => $title,
                     'formID'    => $formID,
-                    'image'     => $image,
+                    // 'image'     => $image,
                     'bg_backdrop'  => $bg_backdrop,
                     'bg_backdrop_blur'  => $bg_backdrop_blur,
                     'type'      => $type,

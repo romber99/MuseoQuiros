@@ -12,13 +12,14 @@ section#contact-form {
         gap: 4rem;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         h2 {
+            color: var(--bg-main);
             margin-bottom: 1rem;
             margin-top: 0;
             font-size: 3rem;
             max-width: 20ch;
-            text-align: left;
+            text-align: center;
             span.big {
                 font-size: 1.1em;
                 margin-left: 1rem;
@@ -26,7 +27,7 @@ section#contact-form {
             }
         }
         .form-column {
-            flex: 0 1 50%;
+            flex: 0 1 auto;
         }
         .form-container {
             flex-grow: 1;
@@ -78,9 +79,9 @@ section#contact-form {
             display: flex;
             flex-direction: column;
 
-            .form-image {
-                display: none;
-            }
+            // .form-image {
+            //     display: none;
+            // }
 
             .form-column {
                 h2 {

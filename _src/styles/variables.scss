@@ -24,13 +24,13 @@ $color: (
     "primary-dark": #013220,
     "primary-faded": #556B2F,
     "primary-faded-transparent": #556b2fa8,
-    "accent":  #A0522D,
-    "accent-light":  #D2691E,
+    "accent":  #003e00,
+    "accent-light":  #36b736,
     "text-color": #333333,
 
-    "bg-main": #F5F5DC,
+    "bg-main": #f7f7ef,
     "bg-main-transparent": #F5F5DCa8,
-    "bg-main-2": #DEB887,
+    "bg-main-2": #a4de87,
     "bg-light":  #D2B48C,
     "bg-inverse": #FFFFFF,
 );
@@ -61,7 +61,7 @@ $color: (
     --c-text:               #{map-get($color, "text-color")};
     --c-text-dark:          #{darken(map-get($color, "text-color"), 5%)};
     --c-text-light:         #{lighten(map-get($color, "text-color"), 10%)};
-    --c-text-grey:          #888888;
+    --c-text-grey:          #686868;
     --c-text-grey-light:    #c5c5c5;
 
     --c-a:                  var(--c-primary-light);

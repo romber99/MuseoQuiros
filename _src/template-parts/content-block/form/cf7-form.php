@@ -1,7 +1,7 @@
 <?php /* Component arguments */
 $formID = get_arg($args,'formID');
 $title = get_arg($args,'title');
-$image = get_arg($args,'image');
+// $image = get_arg($args,'image');
 $bg_backdrop = get_arg($args,'bg_backdrop');
 $bg_backdrop_blur = get_arg($args,'bg_backdrop_blur');
 
@@ -12,11 +12,7 @@ $media = get_arg($args,'media'); ?>
 <?php if ($formID) : ?>
     <section id="contact-form" class="content-section">
         <div class="container">
-            <?php if ($image) :?>
-                <aside class="form-image">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-                </aside>
-            <?php endif; ?>
+                <!-- <aside class="form-image"></aside> -->
             <article class="form-column">
                 <?php if ($title) :?>
                     <h2 id="<?php echo generate_anchor($title);?>"><?php echo $title; ?></h2>
