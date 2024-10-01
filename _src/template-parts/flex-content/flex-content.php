@@ -116,6 +116,22 @@
                 )
             );
 
+        elseif( get_row_layout() == 'videos_list' ) :
+            $title = get_sub_field('title');
+            $post_type = "video";
+            $see_more = get_sub_field('see_more');
+            $post_term = get_sub_field('video_term');
+
+            get_template_part($tp . 'recent-videos/recent-videos', null,
+                array(
+                    'title'     => $title,
+                    'post_type' => $post_type,
+                    'post_taxonomy' => 'video_category',
+                    'post_term' => $post_term,
+                    'see_more'  => $see_more
+                )
+            );
+
         elseif( get_row_layout() == 'form' ) :
             $title = get_sub_field('title');
             $formID = get_sub_field('cf7_form');

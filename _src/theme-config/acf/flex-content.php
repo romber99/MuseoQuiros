@@ -343,6 +343,38 @@ acf_add_local_field_group(array(
                         ),
                     ),
                 ),
+                'layout_videos_list' => array(
+                    'key' => 'layout_videos_list',
+                    'name' => 'videos_list',
+                    'label' => 'Lista de vídeos',
+                    'display' => 'row',
+                    'sub_fields' => array(
+                        array(
+                            'key' => 'field_videos_list_title',
+                            'label' => 'Título',
+                            'name' => 'title',
+                            'type' => 'text',
+                        ),
+                        array(
+                            'key' => 'field_videos_list_see_more',
+                            'label' => 'Texto para el botón de "Ver todos"',
+                            'instructions' => 'Si se deja este texto vacío, no aparecerá ningún botón',
+                            'name' => 'see_more',
+                            'type' => 'text',
+                        ),
+                        array(
+                            'key' => 'field_videos_list_category',
+                            'label' => 'Categoría',
+                            'instructions' => 'Si se deja este campo vacío, aparecerán todas los vídeos más recientes',
+                            'name' => 'video_term',
+                            'allow_null' => true,
+                            'field_type' => 'select',
+                            'type' => 'taxonomy',
+                            'taxonomy' => 'video_category',
+                            'multiple' => false, 
+                        ),
+                    ),
+                ),
                 'layout_form' => array(
                     'key' => 'layout_form',
                     'name' => 'form',
