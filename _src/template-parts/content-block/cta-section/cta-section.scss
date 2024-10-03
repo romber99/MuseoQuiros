@@ -1,0 +1,66 @@
+section.cta-section {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    min-height: 40vh;
+    .container {
+        z-index: 2;
+        padding: 2rem 0;
+        width: fit-content;
+        position: relative;
+        h2 {
+            margin-block: 0;
+            font-size: 3rem;
+            max-width: 25ch;
+            text-align: center;
+            font-style: italic;
+            span.big {
+                font-size: 2em;
+                letter-spacing: .2ch;
+                margin-left: 1rem;
+                line-height: .7em;
+            }
+        }
+        .button-group {
+            margin-top: 1rem;
+            justify-content: center;
+        }
+    }
+    .backdrop-blur {
+        z-index: 1;
+        position: absolute;
+        top: 0; bottom: 0; right: 0; left: 0;
+    }
+    .section-background {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        img, video, iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .img-background {
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/* -----------------------------
+    Breakpoints
+----------------------------- */
+@include mq("md-down") {
+    section.cta-section {
+        .container {
+            .btn-default {
+                font-size: 1em;
+            }
+        }
+    }
+}

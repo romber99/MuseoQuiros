@@ -24,7 +24,7 @@ $cols = get_arg($args,'cols'); ?>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            console.log("Hola caracola");
+            // console.log("Hola caracola");
             
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');

@@ -118,6 +118,7 @@
 
         elseif( get_row_layout() == 'videos_list' ) :
             $title = get_sub_field('title');
+            $description = get_sub_field('description');
             $post_type = "video";
             $see_more = get_sub_field('see_more');
             $post_term = get_sub_field('video_term');
@@ -125,6 +126,7 @@
             get_template_part($tp . 'recent-videos/recent-videos', null,
                 array(
                     'title'     => $title,
+                    'description'     => $description,
                     'post_type' => $post_type,
                     'post_taxonomy' => 'video_category',
                     'post_term' => $post_term,
@@ -204,6 +206,27 @@
             get_template_part($tp . 'map/map', null,
                 array(
                     'title'     => $title,
+                    'type'      => $type,
+                    'media'     => $media
+                )
+            );
+
+        elseif( get_row_layout() == 'cta' ) : 
+            $title = get_sub_field('title');
+            $bg_backdrop =  get_sub_field('bg_backdrop');
+            $bg_backdrop_blur =  get_sub_field('bg_backdrop_blur');
+            $btns = get_sub_field('btn_repeater');
+            $type =  get_sub_field('type');
+            $media = null;
+            if ($type == 'upload-file') { $media = get_sub_field('file'); }
+            elseif ($type == 'external-embed') { $media = get_sub_field('embed'); }
+    
+            get_template_part($tp . 'cta-section/cta-section', null,
+                array(
+                    'title'     => $title,
+                    'bg_backdrop'  => $bg_backdrop,
+                    'bg_backdrop_blur'  => $bg_backdrop_blur,
+                    'btns'      => $btns,
                     'type'      => $type,
                     'media'     => $media
                 )

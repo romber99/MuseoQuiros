@@ -1,5 +1,6 @@
 <?php /* Component arguments */
 $title          = get_arg($args,'title');
+$description          = get_arg($args,'description');
 $post_type      = get_arg($args,'post_type','video');
 $post_taxonomy  = get_arg($args,'post_taxonomy', 'video_category');
 $post_term      = get_arg($args,'post_term');
@@ -57,6 +58,13 @@ if (!$post_taxonomy || !$post_term) {
             <?php endif; ?>
         </div>
     <?php endif; ?>
+    
+    <?php if ($description) : ?>
+        <div class="description">
+            <p><?php echo ($description); ?></p>
+        </div>
+    <?php endif; ?>
+        
         <div class="recent-list">
             <?php $post_index = -1; // First 3 posts rendered differently ?>
             <?php while($post_query->have_posts()) : ?>

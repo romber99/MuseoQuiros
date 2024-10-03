@@ -66,11 +66,12 @@ h3, .h3 {
 strong.outline {
     font-weight: 900;
     color: transparent;
-    background: var(--g-secondary);
+    background: rgba(0, 0, 0, 0);
+    // background: var(--c-primary-text);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    //-webkit-text-stroke: 1px var(--c-text);
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 1px var(--c-primary-text);
     letter-spacing: .1ch;
     &:not(:first-child) {
         margin-left: 4px;
