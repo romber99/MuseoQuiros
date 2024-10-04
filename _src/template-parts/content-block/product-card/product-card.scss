@@ -1,5 +1,5 @@
 section.product-card {
-    width: 100%;
+    width: 70%;
     gap: 2rem;
     display: flex;
     flex-direction: row;
@@ -23,7 +23,7 @@ section.product-card {
             text-transform: uppercase;
             font-weight: 300;
             font-style: italic;
-            color: var(--c-text-grey);
+            color: #333333;
         }
         .product-description {
             p:first-child {
